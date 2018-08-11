@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "../../home/andreashhp/projects/dbk_app/shopify_app/static/shopify_app/stylesheet.css",
+	"sources": [
+		"../../home/andreashhp/projects/dbk_app/shopify_app/static/shopify_app/stylesheet.scss"
+	],
+	"names": [],
+	"mappings": "AACA,AAAA,KAAK,CAAC;EACJ,KAAK,EAAE,IAAI,GAKZ;EAND,AAGE,KAHG,CAGH,EAAE,CAAC;IACD,SAAS,EAAE,IAAI,GAChB"
+}

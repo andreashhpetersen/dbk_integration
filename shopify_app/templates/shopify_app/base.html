@@ -1,0 +1,38 @@
+{% load sass_tags %}
+<!DOCTYPE html>
+<head>
+    <title>DBK Integration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <!-- jQuery 3.2.1. -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+
+    <!-- Bootstrap 3.3.7 -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Custom styles -->
+    <link href="{% sass_src 'shopify_app/stylesheet.scss' %}" rel="stylesheet" type="text/css" />
+
+    {% block style %}{% endblock %}
+
+    <!-- Custom JavaScript -->
+    <script>
+    $.ajaxSetup({
+        data: { csrfmiddlewaretoken: '{{ csrf_token }}' },
+    });
+    </script>
+
+    {% block head_scripts %}{% endblock %}
+
+
+</head>
+<body>
+    <div class="container content-wrap col-md-10 col-md-offset-1">
+        {% block main_content %}
+        {% endblock %}
+    </div>
+</body>
+
