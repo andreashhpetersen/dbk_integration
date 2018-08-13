@@ -18,13 +18,19 @@
             </tr>
         </thead>
         <tbody>
-        {% for order in orders %}
-            {% include 'shopify_app/order_list_item.html' %}
-        {% empty %}
+            {% for order in orders %}
+                {% include 'shopify_app/order_list_item.html' %}
+            {% empty %}
             <tr>
                 <td>Sorry, no Orders have been imported</td>
             </tr>
-        {% endfor %}
+            <tr>
+                <form method="get" action="{% url 'import_orders' %}">
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-default">Import orders</button>
+                </form> 
+            </tr>
+            {% endfor %}
         </tbody>
     </table>
 </div>

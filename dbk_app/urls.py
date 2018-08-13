@@ -20,6 +20,7 @@ from shopify_app import views
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('import-orders/', views.import_orders, name='import_orders'),
     path('install/', views.install, name='install'),
     path('auth/', views.auth, name='auth'),
     path('admin/', admin.site.urls),
