@@ -1,2 +1,4 @@
 db.sqlite3
-.project
+*.project
+*.pyc
+/__pycache__/
